@@ -6,9 +6,15 @@
 import scrapy
 
 
+
 class NewsArticleItem(scrapy.Item):
+    id = scrapy.Field()
     title = scrapy.Field()
-    url = scrapy.Field()
     content = scrapy.Field()
-    date = scrapy.Field()
-    publication = scrapy.Field()
+    publicationDate = scrapy.Field()
+    author = scrapy.Field()
+    imageUrl = scrapy.Field()
+    source = scrapy.Field()
+    category = scrapy.Field()
+    url = scrapy.Field()
+    location = scrapy.Field()
