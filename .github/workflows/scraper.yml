@@ -2,8 +2,8 @@ name: Run News Scraper Automatically
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # Runs at 12:00 AM UTC daily
-  workflow_dispatch:  # Allows manual execution as well
+    - cron: "0 19 * * *"  # Runs every day at 7:00 PM UTC (12:00 AM PST)
+  workflow_dispatch:  # Allows manual execution
 
 jobs:
   scrape-news:
