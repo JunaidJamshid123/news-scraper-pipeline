@@ -11,11 +11,11 @@ class NewsArticleItem(scrapy.Item):
     id = scrapy.Field()
     title = scrapy.Field()
     content = scrapy.Field()
-    publicationDate = scrapy.Field()
+    date = scrapy.Field()
     author = scrapy.Field()
     imageUrl = scrapy.Field()
-    source = scrapy.Field()
+    publication = scrapy.Field()
     category = scrapy.Field()
     url = scrapy.Field()
     location = scrapy.Field()
-    date = scrapy.Field()  # Make sure this line is present
+    date = scrapy.Field()  # Make sure this line is present
