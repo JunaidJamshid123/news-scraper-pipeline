@@ -18,3 +18,4 @@ class NewsArticleItem(scrapy.Item):
     category = scrapy.Field()
     url = scrapy.Field()
     location = scrapy.Field()
+    date = scrapy.Field()  # Make sure this line is present

@@ -11,9 +11,16 @@ import pymongo
 import pymongo
 import logging
 
-MONGO_URI = "mongodb+srv://jamshidjunaid763:JUNAID12345@insightwirecluster.qz5cz.mongodb.net/?retryWrites=true&w=majority&appName=InsightWireCluster"
-DB = 'Scraped-Articles-10'
+#mongodb://localhost:27017/
+#MONGO_URI = "mongodb+srv://jamshidjunaid763:JUNAID12345@insightwirecluster.qz5cz.mongodb.net/?retryWrites=true&w=majority&appName=InsightWireCluster"
+#DB = 'Scraped-Articles-10'
+#COLLECTION = 'Articles'
+
+MONGO_URI = "mongodb://localhost:27017/"
+DB = 'InsightWire'
 COLLECTION = 'Articles'
+
+
 class AljazeerascraperPipeline:
     def open_spider(self, spider):
         # Connect to MongoDB
@@ -27,6 +34,8 @@ class AljazeerascraperPipeline:
         self.collection.create_index("title", unique=True)  
 
         self.items = []  # List to hold items for bulk insertion
+        print("MongoDB connected successfully!")  
+            
 
     def close_spider(self, spider):
         # Insert all collected items in bulk
