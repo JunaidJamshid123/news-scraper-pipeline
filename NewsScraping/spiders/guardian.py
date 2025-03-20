@@ -56,6 +56,8 @@ class guardianSpider(scrapy.Spider):
         article_item['date'] = response.css('summary span::text').get()
 
         article_item['publication'] = 'The Guardian'  # Static value since all articles are from the same source
+        article_item['biasness'] = 'central'  # Static value since all articles are from Fox News
+        article_item['score'] = '0.0'  # Static value since all articles are from Fox News
         
 
         # Yield the item to store or export it

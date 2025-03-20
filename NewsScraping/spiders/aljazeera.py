@@ -46,6 +46,8 @@ class aljazeeraSpider(scrapy.Spider):
         article_item['content'] = response.css('p ::text').getall()
         article_item['date'] = response.css('.date-simple span:nth-of-type(2)::text').get()
         article_item['publication'] = 'Al Jazeera'  # Static value since all articles are from Fox News
+        article_item['biasness'] = 'central'  # Static value since all articles are from Fox News
+        article_item['score'] = '0.0'  # Static value since all articles are from Fox News
         
 
         # Yield the item to store or export it

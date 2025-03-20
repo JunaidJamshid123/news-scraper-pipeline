@@ -48,6 +48,8 @@ class TimeSpider(scrapy.Spider):
         article_item['content'] = response.css('p ::text').getall()
         article_item['date'] = response.css('time:nth-of-type(1) ::text').get()
         article_item['publication'] = 'Time Magazine'  # Static value since all articles are from Fox News
+        article_item['biasness'] = 'central'  # Static value since all articles are from Fox News
+        article_item['score'] = '0.0'  # Static value since all articles are from Fox News
         
 
         # Yield the item to store or export it

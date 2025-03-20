@@ -18,4 +18,6 @@ class NewsArticleItem(scrapy.Item):
     category = scrapy.Field()
     url = scrapy.Field()
     location = scrapy.Field()
-    date = scrapy.Field()  # Make sure this line is present
+    date = scrapy.Field()  # Ensure this line is present
+    biasness = scrapy.Field(default="central")  # Added biasness field with default value
+    score = scrapy.Field(default="0")  # Added biasness field with default value

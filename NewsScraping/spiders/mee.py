@@ -48,7 +48,8 @@ class meeSpider(scrapy.Spider):
         article_item['date'] = response.css('.date-created').xpath('following-sibling::text()').get().strip()
 
         article_item['publication'] = 'Middle East Eye'  # Static value since all articles are from Fox News
-        
+        article_item['biasness'] = 'central'  # Static value since all articles are from Fox News
+        article_item['score'] = '0.0'  # Static value since all articles are from Fox News
 
         # Yield the item to store or export it
         yield article_item
